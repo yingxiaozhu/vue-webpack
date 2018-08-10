@@ -18,7 +18,7 @@ var config = {
                  options: {
                      loaders:{
                          css:ExtractTextPlugin.extract({
-                             use:'class-loader',
+                             use:'css-loader',
                              fallback:'vue-style-loader'
                         })
                      }
@@ -32,7 +32,7 @@ var config = {
             {
                 test:/\.css$/,
                 use:ExtractTextPlugin.extract({
-                    use: 'class-loader',
+                    use: 'css-loader',
                     fallback: 'style-loader'
                 })
             }
