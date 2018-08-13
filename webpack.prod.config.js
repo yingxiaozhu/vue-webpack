@@ -3,6 +3,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var merge = require('webpack-merge');
 var webpackBaseConfig = require('./webpack.config.js');
+var VueLoaderPlugin=require('vue-loader/lib/plugin');
 
 // 清空基本配置的插件列表
 webpackBaseConfig.plugins = [];
@@ -19,6 +20,7 @@ module.exports = merge(webpackBaseConfig, {
             filename: '[name].[hash].css',
             allChunks: true
         }),
+        new VueLoaderPlugin(),
         // 定义当前 node 环境为生产环境
         new webpack.DefinePlugin({
             'process.env': {
