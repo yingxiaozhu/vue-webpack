@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --open --config webpack.config.js",
+    "dev": "webpack-dev-server --open --history-api-fallback --config webpack.config.js",
     "build": "webpack --progress --hide-modules --config webpack.prod.config.js"
   },
   "author": "",
@@ -24,7 +24,7 @@
     "style-loader": "^0.22.1",
     "url-loader": "^1.0.1",
     "vue-hot-reload-api": "^2.3.0",
-    "vue-loader": "^15.3.0",
+    "vue-loader": "^15.2.6",
     "vue-style-loader": "^4.1.1",
     "vue-template-compiler": "^2.5.17",
     "webpack": "^3.12.0",
@@ -32,6 +32,7 @@
     "webpack-merge": "^4.1.4"
   },
   "dependencies": {
-    "vue": "^2.2.6"
+    "vue": "^2.2.6",
+    "vue-router": "^3.0.1"
   }
 }
