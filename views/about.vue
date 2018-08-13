@@ -1,6 +1,8 @@
 <template>
-    <div>介绍页</div>
-    <button @click="handleRouter">跳转到user</button>
+    <div>
+        <div>介绍页</div>
+        <button @click="handleRouter">跳转到user</button>
+    </div>
 </template>
 <script>
     export default {
