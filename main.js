@@ -41,12 +41,14 @@ const RouterConfig={
 };
 const router = new VueRouter(RouterConfig);
 router.beforeEach((to,from,next) =>{
-    //window.document.title= to.meta.title;
-    if(window.localStorage.getItem('token')){
+    window.document.title= to.meta.title;
+    next();
+    /*if(window.localStorage.getItem('token')){
         next();
     }else{
-        next('/login');
-    }
+        //next('/login');
+        console.log(111)
+    }*/
 
 });
 router.afterEach((to,from,next) =>{
