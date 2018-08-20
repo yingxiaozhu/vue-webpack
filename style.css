@@ -1,4 +1,9 @@
-#app{
-    font-size:24px;
-    color:#f50;
+html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color:#525252;
+    font-size:14px;
+    background:#f0f2f5;
 }
+

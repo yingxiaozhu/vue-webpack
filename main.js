@@ -1,8 +1,14 @@
 import Vue from 'vue';
 import App from './app.vue';
 import VueRouter from 'vue-router';
+import Vuex from 'vuex';
+import './style.css';
+import iView from 'iview';
+import 'iview/dist/styles/iview.css';
 
 Vue.use(VueRouter);
+Vue.use(Vuex);
+Vue.use(iView);
 
 const Routers=[
     {
@@ -53,6 +59,21 @@ router.beforeEach((to,from,next) =>{
 });
 router.afterEach((to,from,next) =>{
     window.scrollTo(0,0);
+});
+
+/** vuex **/
+const store = new Vuex.Store({
+    state: {
+        count: 0
+    },
+    mutations: {
+        increment (state, n = 1) {
+            state.count += n;
+        },
+        decrease (state, n = 1) {
+            state.count -= n;
+        }
+    }
 });
 
 new Vue({
