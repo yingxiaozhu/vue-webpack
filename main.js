@@ -1,90 +1,45 @@
+// 导入 VUe 框架
 import Vue from 'vue';
+// 导入 app.vue 组件
 import App from './app.vue';
+// 导入 vue-router 路由配置文件
+import Routers from './src/routers/router.js';
+
+
 import VueRouter from 'vue-router';
-import Vuex from 'vuex';
-import './style.css';
+
 import iView from 'iview';
+
 import 'iview/dist/styles/iview.css';
 
-Vue.use(VueRouter);
-Vue.use(Vuex);
+
+/*Vue.use(Vuex);*/
 Vue.use(iView);
 
-const Routers=[
-    {
-        path:'/index',
-        meta:{
-            title:'首页'
-        },
-        component:(resolve) => require(['./views/index.vue'],resolve)
-    },
-    {
-        path:'/about',
-        meta:{
-            title:'关于'
-        },
-        component:(resolve) => require(['./views/about.vue'],resolve)
-    },
-    {
-        path:'/user/:id',
-        meta:{
-            title:'个人主页'
-        },
-        component:(resolve) => require(['./views/user.vue'],resolve)
-    },
-    {
-        path:'*',
-        redirect:'/index'
-    }
+Vue.use(VueRouter);
 
-
-];
-
-
-const RouterConfig={
-    mode:'history',
-    routes:Routers
+console.log(Routers);
+const RouterConfig = {
+    routes: Routers
 };
-const router = new VueRouter(RouterConfig);
-router.beforeEach((to,from,next) =>{
-    window.document.title= to.meta.title;
-    next();
-    /*if(window.localStorage.getItem('token')){
-        next();
-    }else{
-        //next('/login');
-        console.log(111)
-    }*/
+const router=new VueRouter(RouterConfig);
 
-});
-router.afterEach((to,from,next) =>{
-    window.scrollTo(0,0);
-});
 
-/** vuex **/
-const store = new Vuex.Store({
-    state: {
-        count: 0
+/*<script>
+new Vue({
+    el: '#app',
+    data: {
+        visible: false
     },
-    mutations: {
-        increment (state, n = 1) {
-            state.count += n;
-        },
-        decrease (state, n = 1) {
-            state.count -= n;
+    methods: {
+        show: function () {
+            this.visible = true;
         }
     }
-});
-
+})
+</script>*/
 new Vue({
     el:'#app',
     router:router,
     render:h =>h(App)
 })
-
-
-
-
-
-
-//document.getElementById('app').innerHTML='Hello webpack';
