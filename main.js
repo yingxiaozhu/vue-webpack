@@ -3,10 +3,10 @@ import Vue from 'vue';
 // 导入 app.vue 组件
 import App from './app.vue';
 // 导入 vue-router 路由配置文件
-import Routers from './src/routers/router.js';
+import router from './src/routers/router';
 
 
-import VueRouter from 'vue-router';
+//import VueRouter from 'vue-router';
 
 import iView from 'iview';
 
@@ -16,13 +16,13 @@ import 'iview/dist/styles/iview.css';
 /*Vue.use(Vuex);*/
 Vue.use(iView);
 
-Vue.use(VueRouter);
+//Vue.use(VueRouter);
 
-console.log(Routers);
+/*console.log(Routers);
 const RouterConfig = {
     routes: Routers
 };
-const router=new VueRouter(RouterConfig);
+const router=new VueRouter(RouterConfig);*/
 
 
 /*<script>
