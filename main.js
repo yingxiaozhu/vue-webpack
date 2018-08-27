@@ -5,39 +5,24 @@ import App from './app.vue';
 // 导入 vue-router 路由配置文件
 import router from './src/routers/router';
 
+import Bootstrap from 'bootstrap';
+
+import Jquery from 'jquery';
+
 
 //import VueRouter from 'vue-router';
 
-import iView from 'iview';
+//import iView from 'iview';
 
 import 'iview/dist/styles/iview.css';
 
 
 /*Vue.use(Vuex);*/
-Vue.use(iView);
-
-//Vue.use(VueRouter);
-
-/*console.log(Routers);
-const RouterConfig = {
-    routes: Routers
-};
-const router=new VueRouter(RouterConfig);*/
+//Vue.use(iView);
+Vue.use(Bootstrap);
+Vue.use(Jquery);
 
 
-/*<script>
-new Vue({
-    el: '#app',
-    data: {
-        visible: false
-    },
-    methods: {
-        show: function () {
-            this.visible = true;
-        }
-    }
-})
-</script>*/
 new Vue({
     el:'#app',
     router:router,

@@ -7,7 +7,7 @@ import VueRouter from 'vue-router';
 const Routers=[
     {
         path: '/index',
-        component: (resolve) => require(['/app.vue'], resolve)
+        component: (resolve) => require(['./app.vue'], resolve)
     },
     /*{
         path:'/about',

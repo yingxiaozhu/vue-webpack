@@ -1,35 +1,62 @@
 <template>
-    <div role="navigation" class="navbar navbar-default">
-        <div class="container">
-            <!-- <div class="navbar-header">
- 　　　　　　　　　&lt;!&ndash;　<button type="button" class="navbar-toggle"></button>&ndash;&gt;
-                 <a href="/" class="navbar-brand">
-                     <img src="https://lccdn.phphub.org/uploads/sites/hG5JuDSqZ7Y26Kuh0Qat8EYv6XNT0fGc.png" alt="CYJ">
-                 </a>
-             </div>-->
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a tabindex="-1" href="https://laravel-china.org/topics">社区</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">分类</a>
-                    </li>
+    <div>
+        <div role="navigation" class="navbar navbar-default">
+            <div class="container">
+                <!-- <div class="navbar-header">
+     　　　　　　　　　&lt;!&ndash;　<button type="button" class="navbar-toggle"></button>&ndash;&gt;
+                     <a href="/" class="navbar-brand">
+                         <img src="https://lccdn.phphub.org/uploads/sites/hG5JuDSqZ7Y26Kuh0Qat8EYv6XNT0fGc.png" alt="CYJ">
+                     </a>
+                 </div>-->
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a tabindex="-1" href="https://laravel-china.org/topics">社区</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="300" data-close-others="true" aria-expanded="false">分类
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a tabindex="-1" href="https://laravel-china.org/wikis"> 社区 Wiki</a>
+                                    <!-- <i class="fa fa-wikipedia-w"></i>-->
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="https://laravel-china.org/c/qa"></a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="https://laravel-china.org/c/php-jobs"></a>
+                                </li>
+                                <li>
+                                    <a tabindex="-1" href="https://laravel-china.org/c/hunt"></a>
+                                </li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </li>
 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">教程</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">文档</a>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle">开源</a>
-                    </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">教程
+                                <b class="caret"></b>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">文档
+                                <b class="caret"></b>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">开源
+                                <b class="caret"></b>
+                            </a>
+                        </li>
 
-                </ul>
+                    </ul>
+
+                </div>
 
             </div>
-
         </div>
     </div>
 </template>
@@ -106,6 +133,24 @@
         text-decoration: none;
         line-height: 28px;
         color: inherit;
+    }
+
+    .caret{
+        display:inline-block;
+        width:0;
+        height:0;
+        margin-left:2px;
+        vertical-align: middle;
+        border-top:4px dashed;
+        border-right:4px solid  transparent;
+        border-left:4px solid transparent;
+    }
+
+    .dropdown{
+
+    }
+    .dropdown-toggle{
+
     }
 
 </style>
