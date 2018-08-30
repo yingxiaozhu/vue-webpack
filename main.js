@@ -12,13 +12,15 @@ import Jquery from 'jquery';
 
 //import VueRouter from 'vue-router';
 
-//import iView from 'iview';
+import iView from 'iview';
 
 import 'iview/dist/styles/iview.css';
 
+import './style.css';
+
 
 /*Vue.use(Vuex);*/
-//Vue.use(iView);
+Vue.use(iView);
 Vue.use(Bootstrap);
 Vue.use(Jquery);
 

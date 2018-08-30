@@ -1,6 +1,7 @@
 <template>
     <div class="layout">
         <Header>
+            <div role="navigation" class="navbar navbar-default">
                 <div class="container">
                     <div class="navbar-header">
                         <a href="/" class="navbar-brand">
@@ -179,19 +180,25 @@
                             </li>
 
                         </ul>
+
                     </div>
                     <form role="form">
                         <div class="input">
-                          <!--  <input type="text" class="form-control" id="name" placeholder="请输入名称">-->
-                            <Button type="primary" shape="circle" icon="ios-search">Search</Button>
-
+                            <input type="text" class="form-control" id="name" placeholder="请输入名称">
+                            <i class="glyphicon glyphicon-search"></i>
                         </div>
                     </form>
                     <div class="btn-group btn-menu">
                         <Button ><Icon type="md-person"/>登录</Button>
                         <Button><Icon type="md-person-add"/>注册</Button>
                     </div>
+                    　　　　　　　　　　<div>
 
+                    　　　　　　　　　　　　　　<router-view></router-view>
+                </div>
+
+
+                </div>
             </div>
         </Header>
         <Content>
@@ -241,6 +248,11 @@
         margin-left: 821px;
         top: -55px;
     }
-
+    .navbar-default{
+        border-top: 4px solid #f46660;
+        height: auto;
+        min-height:45px;
+        background-color: #fff;
+    }
 
 </style>
