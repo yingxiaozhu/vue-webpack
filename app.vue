@@ -1,246 +1,78 @@
 <template>
+
     <div class="layout">
-        <Header>
-                <div class="container">
-                    <div class="navbar-header">
-                        <a href="/" class="navbar-brand">
-                            <img src="https://lccdn.phphub.org/uploads/sites/hG5JuDSqZ7Y26Kuh0Qat8EYv6XNT0fGc.png" alt="CYJ">
-                        </a>
-                    </div>
-                    <div>
-                        <ul class="nav navbar-nav">
-                            <li>
-                                <a tabindex="-1" href="https://laravel-china.org/topics">社区</a>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">分类
-                                    <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/wikis"> 社区 Wiki</a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/c/qa">技术问答</a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/c/php-jobs">招聘求职</a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/c/hunt">链接分享</a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/c/tutorials">教程帖子</a>
-                                    </li>
+        <Button shape="circle" icon="ios-search">Search</Button>
+        <Header :style="{position: 'fixed', width: '100%'}">
+            <Menu mode="horizontal" theme="dark" active-name="1">
+                <div class="layout-logo">
+                    <a href="/">
+                        <img src="https://lccdn.phphub.org/uploads/sites/hG5JuDSqZ7Y26Kuh0Qat8EYv6XNT0fGc.png" alt="CYJ">
+                    </a>
+                </div>
+                <div class="layout-nav">
+                    <MenuItem name="1">
+                       社区
+                    </MenuItem>
+                    <MenuItem name="2">
+                        分类
+                    </MenuItem>
+                    <MenuItem name="3">
+                       教程
+                    </MenuItem>
+                    <MenuItem name="4">
+                       文档
+                    </MenuItem>
+                    <MenuItem name="4">
+                        开源
+                    </MenuItem>
+                </div>
 
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/c/life">分享生活</a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/c/announcement">社区公告</a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/c/meetups">线下聚会</a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/c/translations">外文翻译</a>
-                                    </li>
-                                </ul>
-                            </li>
+            </Menu>
 
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">教程
-                                    <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/courses">Laravel 实战教程首页</a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/courses/laravel-essential-training-5.5">
-                                            《L01 Laravel 教程 - Web 开发实战入门 ( Laravel 5.5 )》
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/courses/laravel-intermediate-training-5.5">
-                                            《L02 Laravel 教程 - Web 开发实战进阶 ( Laravel 5.5 )》
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/courses/laravel-advance-training-5.5">
-                                            《L03 Laravel 教程 - 实战构架 API 服务器》
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/courses/laravel-weapp">
-                                            《L04 Laravel 教程 - 微信小程序从零到发布》
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/courses/laravel-shop">
-                                            《L05 Laravel 教程 - 电商实战》
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/courses/laravel-package">
-                                            《Laravel / PHP 扩展包视频教程》
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/courses/creating-package">
-                                            《PHP 扩展包实战教程 - 从入门到发布》
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">文档
-                                    <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/docs">社区文档首页</a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/docs/laravel/5.6">
-                                            《Laravel 中文文档》
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/docs/laravel-specification/5.5">
-                                            《 Laravel 项目开发规范》》
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/docs/composer/2018">
-                                            《Composer 中文文档》
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/docs/elasticsearch-php/6.0">
-                                            《Elasticsearch-PHP 中文文档》
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/docs/lumen/5.6">
-                                            《Lumen 中文文档》
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/docs/graphql-php">
-                                            《GraphQL PHP 中文文档》
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">开源
-                                    <b class="caret"></b>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/projects/filter/laravel-library">Laravel 扩展排行榜
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/projects/filter/laravel-app?order=github_stars">
-                                            Laravel 应用排行榜
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/projects/filter/laravel">
-                                            Laravel 开源排行榜
-
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/projects/filter/laravel-cn">
-                                            Laravel 国产项目
-
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/projects/filter/laravel-top250">
-                                            GitHub Laravel TOP 250
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a tabindex="-1" href="https://laravel-china.org/pages/improve-opensource-db">
-                                            参与改进开源知识库
-                                        </a>
-                                    </li>
-
-                                </ul>
-                            </li>
-
-                        </ul>
-                    </div>
-                    <form role="form">
-                        <div class="input">
-                          <!--  <input type="text" class="form-control" id="name" placeholder="请输入名称">-->
-                            <Button type="primary" shape="circle" icon="ios-search">Search</Button>
-
-                        </div>
-                    </form>
-                    <div class="btn-group btn-menu">
-                        <Button ><Icon type="md-person"/>登录</Button>
-                        <Button><Icon type="md-person-add"/>注册</Button>
-                    </div>
-
-            </div>
         </Header>
         <Content>
+            　
 
         </Content>
-        <Footer>
-
-        </Footer>
+        <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
     </div>
-
 </template>
-<script>
-    export default{
-        data(){
-            return {
-                theme1: 'light'
-            }
-        }
+<style scoped>
+
+    .layout{
+        border:1px solid #d7dde4;
+        background: #f5f7f9;
+        position:relative;
+        border-radius: 4px;
+        overflow:hidden;
+    }
+    .layout-logo img{
+        width: 100px;
+        height: 30px;
+        background: #5b6270;
+        border-radius: 3px;
+        float: left;
+        position: relative;
+        top: 12px;
+        left: 559px;
 
     }
-</script>
-<style scoped>
-    .navbar-brand > img{
-        width: 128px;
+    .layout-nav{
+        width: 420px;
+        margin: 0 auto;
     }
-    .fa{
-        display: inline-block;
-        font: normal normal normal 14px/1 FontAwesome;
-        font-size: inherit;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-    }
-    .dropdown-menu i.fa {
-        margin-right: 16px;
-    }
-    #name{
-        width: 242px;
-        border-radius: 4em;
-        margin-top: 10px;
-    }
-    .glyphicon{
-        margin-left: 213px;
-        top:-23px;
-        color: gray;
-    }
-    .btn-menu{
-        margin-left: 821px;
-        top: -55px;
+    .layout-footer-center{
+        text-align: center;
     }
 
 
 </style>
+
+<script>
+    export default{
+        components:{
+            "directive":"my-directive"
+        }
+
+    }
+</script>
